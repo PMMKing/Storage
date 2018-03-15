@@ -31,26 +31,25 @@ public class MainActivity extends AppCompatActivity {
         list.add(new TestBean());
         list.add(new TestBean());
         list.add(new TestBean());
-//        Store.putGenerics("list", list);
         Store.put("listsss", list);
-
 
         ArrayList<TestBean> listsss = Store.get("listsss", ArrayList.class, null);
         TestBean testBean = listsss.get(1);
 
 
-//        ArrayList<TestBean> beans = Store.getGenerics("list", new TypeReference<ArrayList<TestBean>>() {
-//        });
-//        String s = "";
-//        for (TestBean bean : beans) {
-//            s += bean.toString();
-//        }
+        String s = Store.get("zhangsan", TestBean.class, null).toString() + "\n" +
+                Store.get("string", "") + "\n"
+                + Store.get("int", 0) + "\n" +
+                Store.get("long", 0L) + "\n" +
+                Store.get("byte", (byte) 0) + "\n"
+                + Store.get("short", (short) 0) + "\n" +
+                Store.get("float", (float) 0) + "\n" +
+                Store.get("boolean", true) + "\n"
+                + "\n" + testBean.toString();
+
 
         TextView tvShow = findViewById(R.id.tv_show);
-        tvShow.setText(Store.get("zhangsan", TestBean.class, null).toString() + "\n" + Store.get("string", "") + "\n"
-                + Store.get("int", 0) + "\n" + Store.get("long", 0L) + "\n" + Store.get("byte", (byte) 0) + "\n"
-                + Store.get("short", (short) 0) + "\n" + Store.get("float", (float) 0) + "\n" + Store.get("boolean", true) + "\n"
-                + "\n" + testBean.toString());
+        tvShow.setText(s);
 
 
     }
