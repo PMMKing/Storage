@@ -17,11 +17,11 @@ public class Store {
     private Context mContext;
 
     public static void init(Context context, String fileName) {
-        storage = Storage.newStorage(context, fileName);
+        storage = Storage.newStorage(context.getApplicationContext(), fileName);
     }
 
     public static void refreshStore(Context context, String fileName) {
-        storage = Storage.newStorage(context, "fileName");
+        storage = Storage.newStorage(context.getApplicationContext(), "fileName");
     }
 
     public static void remove(String key) {
@@ -54,13 +54,6 @@ public class Store {
     public static void put(String key, Serializable value) {
         storage.putSerializable(key, value);
     }
-
-//    /**
-//     * 存泛型(List/Map 等...)
-//     */
-//    public static void putGenerics(String key, Serializable value) {
-//        storage.putString(key, JSON.toJSONString(value));
-//    }
 
     public static boolean get(String key, boolean defaultValue) {
         try {
