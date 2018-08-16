@@ -1,4 +1,4 @@
-package com.yuan.storage;
+package com.yuan.storagetest;
 
 import android.app.Application;
 

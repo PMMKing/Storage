@@ -3,7 +3,7 @@ package com.yuan.storage;
 import android.content.Context;
 import android.util.Base64;
 
-import com.yuan.library.IStorage;
+import com.yuan.storage.IStorage;
 
 import org.json.JSONException;
 import org.json.JSONObject;

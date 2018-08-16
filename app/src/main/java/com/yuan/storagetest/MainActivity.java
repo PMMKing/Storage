@@ -1,9 +1,10 @@
-package com.yuan.storage;
+package com.yuan.storagetest;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import com.yuan.storagetest.R;
 import com.yuan.storage.Store;
 
 import java.io.Serializable;
