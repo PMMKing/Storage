@@ -1,8 +1,6 @@
-package com.yuan.library;
+package com.yuan.storage;
 
 import android.content.Context;
-import android.os.Environment;
-import android.text.TextUtils;
 
 import java.io.File;
 import java.io.Serializable;
@@ -12,7 +10,7 @@ import java.io.Serializable;
  */
 
 public class Storage {
-    private IStorage mProxy;
+    private com.yuan.storage.IStorage mProxy;
 
     public static Storage newStorage(Context context,String fileName) {
         return new Storage(context,fileName);
@@ -20,7 +18,7 @@ public class Storage {
 
     private Storage(Context context,String fileName) {
         File file1 = new File(context.getFilesDir().getAbsolutePath(), "storage");
-        this.mProxy = FileStorage.newInstance(context, new File(file1, fileName));
+        this.mProxy = com.yuan.storage.FileStorage.newInstance(context, new File(file1, fileName));
     }
 
     public boolean putString(String key, String value) {

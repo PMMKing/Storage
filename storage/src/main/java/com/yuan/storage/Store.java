@@ -1,9 +1,6 @@
-package com.yuan.library;
+package com.yuan.storage;
 
 import android.content.Context;
-
-import com.alibaba.fastjson.JSON;
-import com.alibaba.fastjson.TypeReference;
 
 import java.io.Serializable;
 
@@ -13,15 +10,15 @@ import java.io.Serializable;
 
 public class Store {
 
-    private static Storage storage;
+    private static com.yuan.storage.Storage storage;
     private Context mContext;
 
     public static void init(Context context, String fileName) {
-        storage = Storage.newStorage(context.getApplicationContext(), fileName);
+        storage = com.yuan.storage.Storage.newStorage(context.getApplicationContext(), fileName);
     }
 
     public static void refreshStore(Context context, String fileName) {
-        storage = Storage.newStorage(context.getApplicationContext(), "fileName");
+        storage = com.yuan.storage.Storage.newStorage(context.getApplicationContext(), "fileName");
     }
 
     public static void remove(String key) {

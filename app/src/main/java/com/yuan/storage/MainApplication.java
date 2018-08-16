@@ -2,7 +2,7 @@ package com.yuan.storage;
 
 import android.app.Application;
 
-import com.yuan.library.Store;
+import com.yuan.storage.Store;
 
 /**
  * Created by shucheng.qu on 2018/3/15

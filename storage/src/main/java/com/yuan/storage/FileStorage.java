@@ -1,7 +1,9 @@
-package com.yuan.library;
+package com.yuan.storage;
 
 import android.content.Context;
 import android.util.Base64;
+
+import com.yuan.library.IStorage;
 
 import org.json.JSONException;
 import org.json.JSONObject;
@@ -16,11 +18,6 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 import java.io.Serializable;
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.Iterator;
-import java.util.List;
-import java.util.Map;
 
 /**
  * Created by shucheng.qu on 2018/3/14

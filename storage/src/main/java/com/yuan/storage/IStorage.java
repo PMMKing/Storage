@@ -1,4 +1,4 @@
-package com.yuan.library;
+package com.yuan.storage;
 
 import java.io.Serializable;
 import java.util.List;
