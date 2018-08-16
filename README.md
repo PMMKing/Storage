@@ -10,7 +10,7 @@ allprojects {
 	}
 
 dependencies {
-	        compile 'com.github.evernightking:Storage:v1.0'
+	        implementation 'com.github.PMMKing:Storage:1.1'
 	}
 ````
 
