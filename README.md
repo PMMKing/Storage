@@ -10,7 +10,7 @@ allprojects {
 	}
 
 dependencies {
-	        implementation 'com.github.PMMKing:Storage:1.1'
+	        implementation 'com.github.PMMKing:Storage:1.2.1'
 	}
 ````
 
